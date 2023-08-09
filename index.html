@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Push</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <h1 class="display-5 fw-bold text-body-emphasis">Web Push</h1>
+        </header>
+
+        <div class="d-grid gap-2 justify-content-sm-center">
+            <div class="row mb-5">
+                <div class="col">
+                    <button class="btn btn-primary btn-lg" id="trigger-1">Trigger Push Notification</button>
+                </div>
+            </div>
+
+            <div class="row" id="dashboard" hidden>
+                <div class="col">
+                    <p class="fw-normal text-muted mb-3">
+                        What type are you subscribing to?
+                    </p>
+
+                    <div class="btn-group mb-5 typesGroup" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="type1" value="type1">
+                        <label class="btn btn-outline-primary" for="btncheck1">Notification type 1</label>
+                      
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="type2" value="type2">
+                        <label class="btn btn-outline-primary" for="btncheck2">Notification type 2</label>
+                      
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="type3" value="type3">
+                        <label class="btn btn-outline-primary" for="btncheck3">Notification type 3</label>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-info" id="trigger-2">Save</button>
+                        <button class="btn btn-outline-primary" id="trigger-3">Submit for selected types</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
